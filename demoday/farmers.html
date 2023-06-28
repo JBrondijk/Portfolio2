@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Protecting Farmers! </title>
+		<link href="style.css" rel="stylesheet"/> 
+		<link rel="shortcut icon" type="image/png" href="https://www.beeksebergen.nl/favicon/apple-icon-120x120.png"/>
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body style = "overflow:hidden;">
+		<h1 style = "padding-left:3rem"> <img src="./textures/arrow.png" onclick =location.href="/demoday.html" style = "height:1.5rem; position:absolute; margin-left: -2.5rem;"></img> Protecting Farmers</h1>
+		
+		<div id="myARcontainer"> 
+			<div id = "speechBubble" style = "display:none">
+				<div id = "speechBubbleArrowTop"> </div>
+				<p id = "speechBubbleText">Hello </p>
+			</div>
+		</div>
+		
+
+
+		<div class = "menu" id="startMenu">
+			<h2> Farmers in trouble! </h2>
+			<p class= "menuText"> For many African farmers, life isn't always as easy. Wild animals cause a lot of problems among people, and in return, people cause the animals problems as well. 
+				<br> By protecting these farmers, we don't just help the farmers, but the animals too!  
+				<br> <br> Can you find the right solution to these farmer's problems? </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+
+		<div id = "scanning" class= "menu" style = "display:none">
+			<h2> Aim your phone at the sign: </h2>
+			<div class="inner">
+				<div class ="scanline"></div>
+			</div>
+		</div>
+
+		<div id="selectPrompt" style = "display:none; position:absolute; bottom:5vh; left:10vw; width : 80vw; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+			<h2 style = "background: #FCCF4D; color: black;"> Choose the right solution!</h2>
+		</div>
+
+		<div class = "menu" id="foundMenu" style = "display:none; ">
+			<div>
+				<h2 id = "resultHeader"> ResultHeader </h2>
+				<p class= "menuText" id ="resultText"> ResultText </p>
+			</div>
+			<p class="souvenirText">
+				<span>Farmers helped:</span> <span id="questionsAnswered" class = "progressCounter"> 0 /4 </span>
+			</p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnContinue"> Continue </button>
+				<button class = "btn-orange" id="btnRet" onclick =location.href="/demoday.html" style = "display:none"> Return to demo overview </button>
+			</div>
+		</div>
+
+		<div id = "arrowSpacer" style = "width: 8rem;"></div>
+
+	<script src="../libs/mindar/mindar-image-three.prod.js"></script>
+	<script src="./farmers.js" type ="module"></script> <!-- change name to proper JS file. -->
+
+	</body>
+</html>

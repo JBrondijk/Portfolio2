@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html style="position:relative; margin:0; width:100%; height:100%; overflow:hidden;">
+
+	<head>
+		<title> Bad Souvenirs! </title>
+		<link href="style.css" rel="stylesheet"/> 
+		<link rel="shortcut icon" type="image/png" href="https://www.beeksebergen.nl/favicon/apple-icon-120x120.png"/>
+		<link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body style = "position:relative; margin:0; width:100%; height:100%; overflow:hidden;">
+		<h1 style = "position:absolute; width:100%; top:0; z-index:9;padding-left:3rem"> <img src="./textures/arrow.png" onclick =location.href="/demoday.html" style = "height:1.5rem; position:absolute; margin-left: -2.5rem;"></img>  Bad Souvenirs</h1>
+		
+		<div id="myARcontainer" style = "position:relative; margin:0; width:100%; height:100%; overflow:hidden;"></div>
+
+		<div class = "menu" id="startMenu" style = "display:block;" >
+			<h2> Vind de foute souvenirs! </h2>
+			<p class= "menuText" id="startMenuText"> 
+			Here at customs we encounter all sorts of "bad souvenirs". <br> 
+			Souvenirs which, at first sight, might seem really fun, but in fact are very harmful to animal and nature alike. <br>
+			<br>
+			Can you intercept all bad souvenirs from the luggage?
+			</p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+
+		<div id = "scanning" class= "menu" style = "display:none">
+			<h2> Aim your phone at the sign: </h2>
+			<div class="inner">
+				<div class ="scanline"></div>
+			</div>
+		</div>
+
+		<div class = "menu" id="selectMenu" style = "display:none">
+			<h2> Find the bad souvenirs!</h2>
+			<div id="xrayBox"></div>
+		</div>
+
+		<div class = "menu" id="foundMenu" style = "display:none; ">
+			<div id="nothingFound" style = "display:none">
+				<h2> Nothing found... </h2>
+				<p class= "menuText"> There weren't any bad souvenirs in here... <br><br> Click on a suitcase if you see something suspicious! </p>
+			</div>
+			<div id="souvenir0" style = "display:none">
+				<h2> Giraffe-hair bracelet</h2>
+				<img class= "souvenirImg" src="./textures/souvenirs/souvenir1_bracelet.png"></img>
+				<p class= "menuText"> These traditional good-luck bracelets are being sold around Africa. In the past, they were made from elephant-hairs. When too many elephants were being killed, using elephant parts became prohibited. Now the bracelets are made from giraffe-hair, and poachers switched to hunting giraffe.
+					<br>If people stop buying these kinds of bracelets, no more animals will have to suffer for them.  
+				</p>
+			</div>
+			<div id="souvenir1" style = "display:none">
+				<h2> Exotic feathers</h2>
+				<img class= "souvenirImg" src="./textures/souvenirs/souvenir2_feather.png"></img>
+				<p class= "menuText"> Exotic birds can have beautiful colours. Because of this, their feathers are being used for jewellery, pens, masks and other attires. Sadly, the birds these feathers belong to are often endangered, and they are being killed for their pretty feathers. 
+					<br>So, don't buy anything with these kinds of feathers to protect the birds!  
+				</p>
+			</div>
+			<div id="souvenir2" style = "display:none">
+				<h2>Ivory Statue</h2>
+				<img class= "souvenirImg" src="./textures/souvenirs/souvenir3_ivory.png"></img>
+				<p class= "menuText"> Ivory comes from the tusk of elephants. It's worth a lot of money, and as a result many elephants are killed to obtain it. The trade in ivory is prohibited, with the exception of antique ivory. This created a loophole poachers use to continue trading fresh ivory. Especially in Asia, ivory statues, jewellery and chopsticks continue to be sold. 
+				<br> If people stop buying souvenirs out of ivory, less and less elephants will be poached.    
+				</p>
+			</div>
+			<div id="souvenir3" style = "display:none">
+				<h2>Reptiles</h2>
+				<img class= "souvenirImg" src="./textures/souvenirs/souvenir4_turtles.png"></img>
+				<p class= "menuText"> There's a high demand for exotic pets. People want to keep the strangest animals. Reptiles are especially popular, and often aren't protected by the law. These animals are picked out of the wild, packed with duct-tape, or stuffed in way too small container. All to be smuggled across borders and sold in pet shops or online. 
+					<br>If people stop keeping these animals as pets, the illegal trade in them will also cease to exist.  
+				</p>
+			</div>
+			<div id="souvenir4" style = "display:none">
+				<h2>Traditional Medicine </h2>
+				<img class= "souvenirImg" src="./textures/souvenirs/souvenir5_medicine.png"></img>
+				<p class= "menuText"> Many cultures think animal parts contain special powers. The bones of a tiger  would cure burns or rheumatism. The whiskers help toothaches. And thus, these parts are mixed into all sorts of "medicine". In China alone, more than 6000 tigers live on farms, where they're being bread for to be used in medicine. 
+					<br> If people keep buying these medicines, only more tigers will end up on these kinds of farms.  
+				</p>
+			</div>
+			<div id="allFound" style = "display:none">
+				<h2> Everything found! </h2>
+				<p class= "menuText"> You discoverd all the bad souvenirs, well done! <br> Now you know which souvenirs are better left on the shelf. 
+					<br><br> If you want to look at the souvenirs again, you can keep playing, otherwise, you can return to the demo overview. !</p>
+			</div>
+
+			<p class="souvenirText">
+				<span>Souvenirs found:</span> <span id="souvenirsFound" class = "progressCounter"> 0 /5 </span>
+			</p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnContinue"> Continue </button>
+				<button class = "btn-orange" id="btnRet" onclick =location.href="/demoday.html" style = "display:none"> Return to demo overview </button>
+			</div>
+		</div>
+
+
+	<script src="../libs/mindar/mindar-image-three.prod.js"></script>
+	<script src="./badsouvenirs.js" type ="module"></script> <!-- change name to proper JS file. -->
+
+	</body>
+</html>
+

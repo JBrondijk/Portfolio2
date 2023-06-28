@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Rhino Management</title>
+		<link href="style.css" rel="stylesheet"/> 
+		<link rel="shortcut icon" type="image/png" href="https://www.beeksebergen.nl/favicon/apple-icon-120x120.png"/>
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../libs/mindar/mindar-image-three.prod.js"></script>
+		<script src="./rhinos.js" type ="module"></script> 
+	</head>
+
+	<body style = "overflow:hidden;">
+		<h1 style = "padding-left:3rem"> <img src="./textures/arrow.png" onclick =location.href="/demoday.html" style = "height:1.5rem; position:absolute; margin-left: -2.5rem;"></img> Rhino Management</h1>
+		<div> 
+		
+			<div id="myARcontainer"> </div>
+		</div>
+
+		<div id = "enclInfo" style = "display:none; overflow:hidden"> 
+			<div class = "rhinoMenu" id = "encl0">
+				<h3>Enclosure 1: <span id = "encl0Contents" style="float:right"> (1m - 3v)</span></h3>
+				<img class = "rhinoProblem" id= "encl0Fight" src="textures/RhinoIconFight.png"> </img>
+				<img class = "rhinoProblem" id= "encl0Breed" src="textures/RhinoIconInbreeding.png"> </img>
+				<img class = "rhinoProblem" id= "encl0Man" style="display:none" src="textures/RhinoIconMan.png"> </img>
+				<img class = "rhinoProblem" id= "encl0Crowd" style="display:none" src="textures/RhinoIconOvercrowding.png"> </img>
+			</div>
+			<div class = "rhinoMenu" id = "encl1">
+				<h3>Enclosure 2: <span id = "encl1Contents" style="float:right"> (1m - 3v)</span></h3>
+				<img class = "rhinoProblem" id= "encl1Fight" src="textures/RhinoIconFight.png"> </img>
+				<img class = "rhinoProblem" id= "encl1Breed" src="textures/RhinoIconInbreeding.png"> </img>
+				<img class = "rhinoProblem" id= "encl1Man" style="display:none" src="textures/RhinoIconMan.png"> </img>
+				<img class = "rhinoProblem" id= "encl1Crowd" style="display:none" src="textures/RhinoIconOvercrowding.png"> </img>
+			</div>
+			<div class = "rhinoMenu" id = "encl2">
+				<h3>Enclosure 3: <span id = "encl2Contents" style="float:right"> (1m - 3v)</span></h3>
+				<img class = "rhinoProblem" id= "encl2Fight" src="textures/RhinoIconFight.png"> </img>
+				<img class = "rhinoProblem" id= "encl2Breed" src="textures/RhinoIconInbreeding.png"> </img>
+				<img class = "rhinoProblem" id= "encl2Man" style="display:none" src="textures/RhinoIconMan.png"> </img>
+				<img class = "rhinoProblem" id= "encl2Crowd" style="display:none" src="textures/RhinoIconOvercrowding.png"> </img>
+			</div>
+			<div class = "rhinoMenu" id = "encl3">
+				<h3>Enclosure 4: <span id = "encl3Contents" style="float:right"> (1m - 3v)</span></h3>
+				<img class = "rhinoProblem" id= "encl3Fight" src="textures/RhinoIconFight.png"> </img>
+				<img class = "rhinoProblem" id= "encl3Breed" src="textures/RhinoIconInbreeding.png"> </img>
+				<img class = "rhinoProblem" id= "encl3Man" style="display:none" src="textures/RhinoIconMan.png"> </img>
+				<img class = "rhinoProblem" id= "encl3Crowd" style="display:none" src="textures/RhinoIconOvercrowding.png"> </img>
+			</div>
+			<div class = "rhinoMenu" id = "encl4">
+				<h3>Enclosure 5: <span id = "encl4Contents" style="float:right"> (1m - 3v)</span></h3>
+				<img class = "rhinoProblem" id= "encl4Fight" src="textures/RhinoIconFight.png"> </img>
+				<img class = "rhinoProblem" id= "encl4Breed" src="textures/RhinoIconInbreeding.png"> </img>
+				<img class = "rhinoProblem" id= "encl4Man" style="display:none" src="textures/RhinoIconMan.png"> </img>
+				<img class = "rhinoProblem" id= "encl4Crowd" style="display:none" src="textures/RhinoIconOvercrowding.png"> </img>
+			</div>
+		</div>
+		
+		<div class = "menu" id="startMenu" style="display:block">
+			<h2> Species manager needed! </h2>
+			<p class= "menuText"> There's all sorts of things wrong with the white rhino enclosures on this sign. Rhinos are inbreeding, and males are fighting over females. 
+					<br><br> Can you arrange the rhinos among these enclosures in a way that there's no more problems? 
+					</p>
+			<div class = "menuButtonContainer">
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+		<div class = "menu" id="controlsMenu" style="display:none">
+			<h2> Game explaination: </h2>
+			<p class= "menuText"> Solve the problems in the enclosures by moving around rhinos. 
+				<br>
+				<br> Open the enclosures by tapping their menus. 
+				<br>
+				<br> Add rhinos from the enclosure to your selection by tapping them.
+				<br>
+				<br> Move rhinos by removing them from your selection in another enclosure. 
+				<br>
+				<br>The game ends when all problems are solved <span class="bold"> and </span> there's no rhinos left in your selection. 
+					</p>
+			<div class = "menuButtonContainer">
+				<button class = "btn-orange" id="btnControls"> Start </button>
+			</div>
+		</div>
+
+
+		<div id = "scanning" class= "menu" style = "display:none">
+			<h2> Aim your phone at the sign: </h2>
+			<div class="inner">
+				<div class ="scanline"></div>
+			</div>
+		</div>
+
+		<div class = "menu" id="enclMenu" style="display:none; overflow:hidden; top: 8vh; max-height: 87vh;">
+			<h2> <span id = "menuTitle">Verblijf 1:</span> <span class="cross" id="closeMenu">X</span> </h2>
+			<div id="enclMenuScroll" style = "max-height: 55vh; overflow:auto;">
+				<h3 style = "margin-right:1rem; margin-left:1rem; margin-top:0.3rem; margin-bottom:0.3rem; background-color:#ADD2FF; border-radius: 0.4rem;"> Males: </h3>
+					<div id = "enclMales" style = "margin-left:1rem;min-height:3rem;"></div>
+				<h3 style = "margin-right:1rem; margin-left:1rem; margin-top:0.3rem; margin-bottom:0.3rem; background-color:#FFADB0; border-radius: 0.4rem;"> Females: </h3>
+					<div id = "enclFemales" style = "margin-left:1rem;min-height:3rem;"></div>
+				<h3 id = "problemHeader" style="background-color:#CC282E; margin-left:1rem;margin-right:1rem; margin-top:1rem;"> Problems: <span id="enclProblemCount">(3)</span>:</h3>
+					<div style = "min-height:2rem;">
+						<div id = "menuBreed" >
+							<h3 class = "problemHeader"> <img class = "rhinoProblem" style = "width:3.5rem; float:left; margin-left:-1rem; margin-top:-1rem; margin-right:0.5rem;" src="textures/RhinoIconInbreeding.png"> </img> Inbreeding! </h3>
+							<p style="margin-left:1rem;"> The colours of the rhinos indicate a family-bond. When 2 rhinos of the same family have offspring, their children have an increased chance of genetic diseases. So don't put males and females of the same colours in one enclosure.</p>
+						</div>
+						<div id = "menuFight" >
+							<h3 class = "problemHeader"> <img class = "rhinoProblem" style = "width:3.5rem; float:left; margin-left:-1rem; margin-top:-1rem; margin-right:0.5rem;" src="textures/RhinoIconFight.png"> </img> Males fighting! </h3>
+							<p style="margin-left:1rem;"> Male white rhinos get along perfectly fine, unless they are joined by a female. When that's the case, they'll fight over who gets the female. So make sure there's only one male with a group of females.</p>
+						</div>
+						<div id = "menuMan" >
+							<h3 class = "problemHeader"> <img class = "rhinoProblem" style = "width:3.5rem; float:left; margin-left:-1rem; margin-top:-1rem; margin-right:0.5rem;" src="textures/RhinoIconMan.png"> </img> No male! </h3>
+							<p style="margin-left:1rem;">  Without a male, these females can't get any offspring. We want them to, so don't leave any females without a male!</p>
+						</div>
+						<div id = "menuCrowd" >
+							<h3 class = "problemHeader"> <img class = "rhinoProblem" style = "width:3.5rem; float:left; margin-left:-1rem; margin-top:-1rem; margin-right:0.5rem;" src="textures/RhinoIconOvercrowding.png"> </img> Enclosure overfull!</h3>
+							<p style="margin-left:1rem;"> This enclosure doesn't have enough space for the amount of rhinos inside. There's only enough space for 5 rhinos! </p>
+						</div>
+					</div>
+				</div>
+
+			<h3 style="background-color:#FCCF4D; margin-bottom: 0.5rem; color:black"> Selection:</h3>
+			<div style = "max-height: 11vh; width:80vw; overflow:auto;">
+				<div id = "selectionMales" style = "width:45%; min-height: 3rem; border:0.2rem solid #ADD2FF; float:left; margin-left:0.2rem; border-radius: 0.4rem;"> </div> 
+				<div id = "selectionFemales" style = "width:45%; min-height: 3rem; border:0.2rem solid #FFADB0; float:right; margin-right:0.2rem;border-radius: 0.4rem;"> </div>
+			</div>
+
+			<div class = "menuButtonContainer" style = "padding-top:0.5rem;">
+				<button class = "btn-orange" id="movebtn"> Move Rhinos (0) </button>
+			</div>
+			
+		</div>
+
+		<div id="selectPrompt" style = "display:none; position:absolute; bottom:5vh; left:5vw; width : 90vw; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); text-align:center;">
+			<h2 id = "selectionMenu" style = "background: #FCCF4D; color: black;">1m - 3v geselecteerd</h2>
+		</div>
+
+		<div class = "menu" id="winMenu" style="display:none">
+			<h2> Alles Opgelost! </h2>
+			<p class= "menuText"> You've solved all problems, well done!  
+			<br> 
+			<br> Within Europe, there's over 90 zoos who keep white rhinos. Managing all these takes a lot of effort! 
+			<br> As you saw, we have too many males to put every male in a family group, so we make all male "bachelor groups".
+			<br> At the safaripark you also can find bachelor groups for gorillas, hyenas and much more. Have you noticed a bachelor group before?
+			<br>
+			<br> It took you <span class = "waterbokScore" id = "score">x</span> moves to give every rhino suitable home. 
+			<br>
+			<br> Think you can do it in less moves? Try again! Otherwise, feel free to return to the demo overview. 
+			</p>
+			<div class = "menuButtonContainer">
+				<button class = "btn-orange" id="btnWin"> Try again </button>
+				<button class = "btn-orange" id="btnRet" onclick =location.href="/demoday.html"> Return to demo overview </button>
+			</div>
+		</div>
+
+		<div style = "display:none"> <img class= "rhinoIcon" id="iconMaster" src="textures/RhinoIcon.png"></img></div>
+	</body>
+</html>

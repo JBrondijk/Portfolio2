@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Tijger Camouflage </title>
+		<link href="style.css" rel="stylesheet"/>
+	</head>
+
+	<svg>
+		<defs>
+			<filter id="protanopia">
+			  <feColorMatrix type="matrix"
+				values="0.567, 0.433, 0,     0, 0
+						0.558, 0.442, 0,     0, 0
+						0,     0.242, 0.758, 0, 0
+						0,     0,     0,     1, 0"/>
+			</filter>
+		</defs>
+	</svg>
+	
+	<body  style = "overflow:hidden;">
+		<h1> Tijger Camouflage</h1>
+		
+		<div id="videoContainer">
+			<video id="VIDEO" style = "height: 95vh; width: 100vw; object-fit: cover;">Geef de website toestemming om de camera te gebruiken om verder te kunnen.</video>
+			<canvas id="myCanvas" style = "height: 95vh; width: 100vw ;"></canvas>
+		</div>
+		<!--
+		<div> 
+			<p>
+				Voor ons is het misschien niet zo moeilijk een tijger te spotten, ze hebben immers een vrij opvallende kleur.
+				Toch hebben sommige dieren hier iets meer moeite mee. Herten zoals edelherten en sikaherten zien de wereld net een stukje anders als wij, ze zijn namelijk kleurenblind! 
+				Deze dieren hebben in hun ogen geen kegeltjes om rood mee te zien, hierdoor kunnen ze slecht onderscheid tussen rood en groen maken.
+				Zoals je hierboven zelf kan zien, is het dan ineens een stuk moeilijker om zo'n tijger te spotten! 
+			</p>
+		</div>
+		-->
+	<script src="script.js"></script>
+	</body>
+</html>

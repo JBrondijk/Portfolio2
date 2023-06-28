@@ -8,7 +8,7 @@
     --color-base: rgba(46, 51, 58, 0.8); 
     --color-base2: rgb(30, 36, 43); 
     --color-brand: #FF8427;
-    --color-brand2: #FF8427;
+    --color-brand2: #FFD2AD;
     --sidbar-width: 240px;
     --font-base: "Rubik";
 }
@@ -48,7 +48,9 @@
     background-image: url(../images/aboutMe.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    background-position: center;
+    min-height: 80vh;
+    height: 100%;
     text-shadow: rgb(0, 0, 0) 2px 0 5px;
 }
 
@@ -164,7 +166,7 @@ img {
 .btn-brand {
     background-color: var(--color-brand);
     border-color: var(--color-brand);
-    color: var(--color-base);
+    color: var(--color-body);
 }
 
 .btn-brand:hover,
@@ -195,6 +197,11 @@ img {
 }
 
 /* CARD */
+.card-custom{
+    overflow:hidden;
+    height: 100%;
+}
+
 .card-custom .card-custom-image {
     overflow: hidden;
 }
@@ -241,4 +248,70 @@ img {
     background-color: var(--color-base);
     border-radius: 100px;
     font-size: 24px;
+}
+
+footer{
+    background-color: var(--color-base);
+}
+
+.progress {
+    --bs-progress-bar-bg: var(--color-brand);
+}
+
+.expertise-area{
+    display: inline-block;
+}
+
+.expertise-area-NS{
+    display: inline-block;
+    z-index: 3;
+}
+
+.expertise-area-top{
+    width: 0;
+    border-bottom: 1rem solid var(--expertiseAreaColor);
+    border-left: 2rem solid transparent;
+    border-right: 2rem solid transparent;
+}
+
+.video-container{
+    position:   relative;
+    width:      100%;
+    height: 0;
+    padding-top:   56.25%; /* This is your aspect ratio */ 
+}
+
+.YT-video{
+    position: absolute;
+  top:      0;
+  left:     0;
+  bottom:   0;
+  right:    0;
+  width:    100%;
+  height:   100%
+}
+
+/* buttons */
+.button{
+    padding:.8rem 2.2rem;
+    font: normal 500 16px/20px var(--workSans);
+    
+    text-align: center;
+    background-color: var(--buttonColor);
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    border:none;
+    
+}
+
+.button:hover{
+    background-color: var(--buttonColorActive);
+    border:none;
+}
+
+.demo-image{
+    height: 95vh;
+    width: 95vh;
+    display:block;
+    margin:auto;
 }

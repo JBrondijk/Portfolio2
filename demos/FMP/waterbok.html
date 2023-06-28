@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Waterbok Ontsnapping! </title>
+		<link href="style.css" rel="stylesheet"/>
+		<link rel="shortcut icon" type="image/png" href="https://www.beeksebergen.nl/favicon/apple-icon-120x120.png"/>
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body style = "overflow:hidden; max-width:100%">
+		<h1> Waterbok Ontsnapping</h1>
+		
+		<div id="videoContainer" style="height:95vh">
+			<video id="VIDEO" style = "height: 95vh; width: 100vw; object-fit: cover;">Geef de website toestemming om de camera te gebruiken om verder te kunnen.</video>
+		</div>
+
+		<div class="progress-container">
+			<img src="./textures/finish.png" class="finish" style = "position:relative; width:5vw; height: 0.8rem; left: 95vw; top: -0.1rem;"></img>
+			<div class="progress"> <img src="./textures/playerIcon.png" id="playerIcon" style = "position:relative; width: 2.5rem; height: 2.5rem; top: -0.8rem; left: -5vw;"></img> </div>
+			<div class="progressLion"> <img src="./textures/lionIcon.png" id="lionIcon" style = "position:relative; width: 2.5rem; height: 2.5rem; top: -0.8rem; left: -14vw;"></img> </div>
+		</div>
+		
+		<div class = "menu" id="startMenu">
+			<h2> Volg je mede-waterbok! </h2>
+			<p class= "menuText"> Wanneer een groep waterbokken moet ontsnappen aan de klauwen van een leeuw, of ander roofdier, helpt de witte cirkel achterop de waterbok met het bij elkaar blijven, deze valt namelijk goed op tussen het hoge gras. <br> Volgens mij komt er een leeuw aan! Volg je mede-waterbok en let goed op de cirkel!  </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+
+		<div class = "menu" id="iOSMenu" style = "display:none">
+			<h2> Geeft toestemming om te kunnen spelen </h2>
+			<!-- <p class= "menuText"> Deze ARvaring werkt momenteel alleen op Android telefoons. Sorry voor het ongemak.  </p> -->
+			<p class= "menuText"> Geeft toestemming de camera en orientatie te gebruiken om het spel te kunnen spelen.  </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btniOS"> Sta toe </button>
+			</div>
+		</div>
+
+		<div class = "menu" id="warningMessage" style = "display:none">
+			<h2> Let op! </h2>
+			<p class= "menuText" style = "margin-bottom:0;"> Pas tijdens het spelen op je omgeving. Blijf op een plek staan en zorg dat er voldoende ruimte om je heen is.</p>
+			
+			<div class = menuButtonContainer>
+				<img src="./textures/bewareSurroundings.png" style = "width: 95%; margin-bottom:30px;"></img>
+
+				<button class = "btn-orange" id="btnWarn"> Oke </button>
+			</div>
+		</div>
+
+		<div class = "menu" id="gameOverMenu" style = "display:none">
+			<h2> Gepakt! </h2>
+			<p class= "menuText"> Helaas, de leeuw heeft je te pakken genomen... <br> Zorg dat je je mede-waterbok blijft volgen! </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnGameOver"> Probeer opnieuw </button>
+			</div>
+		</div>
+		<div class = "menu" id="winMenu" style = "display:none">
+			<h2> Ontsnapt! </h2>
+			<p class= "menuText"> 
+				Je bent ontsnapt van de leeuw, goed gedaan! Hielp de cirkel een beetje? 
+				<br>
+				<br> Je bent in <span class = "waterbokScore" id = "score">x</span> seconden ontsnapt!
+				<br>
+				<br> Je snelste tijd is <span class = "waterbokScore" id = "highScore">x</span> seconden.
+				<br>
+				<br> denk je dat je dat sneller kan? Probeer het nog eens!</p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnWin"> Probeer opnieuw </button>
+			</div>
+		</div>
+	
+	<script src="./waterbok.js" type ="module"></script>
+	</body>
+</html>

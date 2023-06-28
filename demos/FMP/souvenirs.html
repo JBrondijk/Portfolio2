@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html style="position:relative; margin:0; width:100%; height:100%; overflow:hidden;">
+
+	<head>
+		<title> Foute Souvenirs! </title>
+		<link href="style.css" rel="stylesheet"/> 
+		<link rel="shortcut icon" type="image/png" href="https://www.beeksebergen.nl/favicon/apple-icon-120x120.png"/>
+		<link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body style = "position:relative; margin:0; width:100%; height:100%; overflow:hidden;">
+		<h1 style = "position:absolute; width:100%; top:0; z-index:9;"> Foute Souvenirs</h1>
+		
+		<div id="myARcontainer" style = "position:relative; margin:0; width:100%; height:100%; overflow:hidden;"></div>
+
+		<div class = "menu" id="startMenu" style = "display:block;" >
+			<h2> Vind de foute souvenirs! </h2>
+			<p class= "menuText" id="startMenuText"> 
+			Hier bij de douane komen we allerlei "foute souvenirs" tegen. <br> 
+			Souvenirs die op het eerste oog heel leuk lijken, maar eigenlijk heel schadelijk zijn voor dier en natuur. <br>
+			<br>
+			Kan jij alle foute souvenirs uit de bagage onderscheppen?
+			</p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+
+		<div id = "scanning" class= "menu" style = "display:none">
+			<h2> Richt je telefoon naar het bord: </h2>
+			<div class="inner">
+				<div class ="scanline"></div>
+			</div>
+		</div>
+
+		<div class = "menu" id="selectMenu" style = "display:none">
+			<h2> Zoek de foute souvenirs!</h2>
+			<div id="xrayBox"></div>
+		</div>
+
+		<div class = "menu" id="foundMenu" style = "display:none; ">
+			<div id="nothingFound" style = "display:none">
+				<h2> Niks gevonden... </h2>
+				<p class= "menuText"> Hier zaten geen foute souvenirs in... <br><br> Let goed op of je in andere tassen of koffers iets verdachts ziet!</p>
+			</div>
+			<div id="souvenir0" style = "display:none">
+				<h2> Armbandje van Giraffenhaar</h2>
+				<img class= "souvenirImg" src="./textures/souvenirs/souvenir1_bracelet.png"></img>
+				<p class= "menuText"> Deze traditionele geluksarmbandjes worden in Afrika veel verkocht. Vroeger werden ze gemaakt van afgevallen haren van olifantenstaarten, maar er werden steeds meer olifanten voor gedood dus werd dit verboden. Nu worden de armbandjes gemaakt van giraffenharen, en stappen stropers over op giraffen. 
+					<br>Als mensen stoppen met het kopen van deze armbandjes, hoeven er geen dieren meer voor te lijden. 
+				</p>
+			</div>
+			<div id="souvenir1" style = "display:none">
+				<h2> Exotische Veren</h2>
+				<img class= "souvenirImg" src="./textures/souvenirs/souvenir2_feather.png"></img>
+				<p class= "menuText"> Exotische vogels kunnen prachtige kleuren hebben. Hun veren worden hierdoor veel gebruikt voor sierraden, pennen, maskers of hoofdtooien. Helaas kunnen de vogels waar deze veren vandaan komen beschermd zijn, en worden ze voor hun mooie veren gedood.
+					<br>Koop dus niets met deze veren om de vogels te beschermen!  
+				</p>
+			</div>
+			<div id="souvenir2" style = "display:none">
+				<h2>Ivoren Beeldje</h2>
+				<img class= "souvenirImg" src="./textures/souvenirs/souvenir3_ivory.png"></img>
+				<p class= "menuText"> De stoottanden van een olifant zijn van ivoor. Het is veel geld waard, en dus worden er veel olifanten voor gedood. De handel in ivoor is verboden, behalve voor oud ivoor. Dit maakt het naleven van deze regels moeilijk. Vooral in Azie worden er nog veel beeldjes, sierraden en eetstokjes van ivoor verkocht. 
+				<br> Als mensen stoppen met het kopen van deze souvenirs, zullen er minder olifanten gestroopt worden.   
+				</p>
+			</div>
+			<div id="souvenir3" style = "display:none">
+				<h2>Reptielen</h2>
+				<img class= "souvenirImg" src="./textures/souvenirs/souvenir4_turtles.png"></img>
+				<p class= "menuText"> Er is veel vraag naar exotische huisdieren. Mensen willen de  vreemdste dieren in huis halen. Vooral reptielen zijn erg populair, en worden vaak niet beschermd door de wet. Deze dieren worden uit het wild geplukt, ingepakt met ducktape, of in veel te kleine doosjes gepropt om vervolgens meegesmokkeld te worden. Deze dieren belanden dan in dierenwinkels of online webshops.
+					<br>Als mensen stoppen met het houden van deze dieren als huisdieren, zal ook de illegale handel er in stoppen. 
+				</p>
+			</div>
+			<div id="souvenir4" style = "display:none">
+				<h2>Traditionele Medicijnen</h2>
+				<img class= "souvenirImg" src="./textures/souvenirs/souvenir5_medicine.png"></img>
+				<p class= "menuText"> In veel culturen denkt men dat dierlijke onderdelen speciale krachten hebben. De botten van tijgers zouden brandwonden of reuma genezen. De snorharen tandpijn verhelpen. Dus worden ze verwerkt in allerlei "medicijnen". In China leven al meer dan 6000 tijgers op boerderijen, waar ze gefokt worden voor dit soort medicijnen. 
+					<br> Als mensen deze medicijnen blijven kopen komen er alleen maar meer van deze tijgerboerderijen. 
+				</p>
+			</div>
+			<div id="allFound" style = "display:none">
+				<h2> Alles gevonden! </h2>
+				<p class= "menuText"> Je hebt alle foute souvenirs ontdekt, goed gedaan! <br> Nu weet je welke souvenirs je maar beter kunt laten liggen. 
+					<br><br> Als je de foute souvenirs nog eens wil bekijken kan je door blijven spelen!</p>
+			</div>
+
+			<p class="souvenirText">
+				<span>Souvenirs gevonden:</span> <span id="souvenirsFound" class = "progressCounter"> 0 /5 </span>
+			</p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnContinue"> Ga Verder </button>
+			</div>
+		</div>
+
+
+	<script src="../libs/mindar/mindar-image-three.prod.js"></script>
+	<script src="./souvenirs.js" type ="module"></script> <!-- change name to proper JS file. -->
+
+	</body>
+</html>

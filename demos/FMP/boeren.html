@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Boeren Beschermen! </title>
+		<link href="style.css" rel="stylesheet"/> 
+		<link rel="shortcut icon" type="image/png" href="https://www.beeksebergen.nl/favicon/apple-icon-120x120.png"/>
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body style = "overflow:hidden;">
+		<h1> Boeren Beschermen </h1>
+		
+		<div id="myARcontainer"> 
+			<div id = "speechBubble" style = "display:none">
+				<div id = "speechBubbleArrowTop"> </div>
+				<p id = "speechBubbleText">Olifanten eten mijn gewassen op en trappen alles plat! Als ik ze probeer weg te jagen worden ze aggressief! </p>
+			</div>
+		</div>
+		
+
+
+		<div class = "menu" id="startMenu">
+			<h2> Boeren in problemen! </h2>
+			<p class= "menuText"> Voor veel Afrikaanse boeren is het leven niet altijd even makkelijk. Wilde dieren zorgen voor veel problemen bij mensen, en hierdoor mensen ook bij de dieren. 
+				<br> Door deze boeren te beschermen, helpen we niet alleen de boeren, maar ook de dieren!  
+				<br> <br> Kan jij de juiste oplossingen voor de problemen van deze boeren vinden? </p>
+			<div class = "menuButtonContainer">
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+
+		<div id = "scanning" class= "menu" style = "display:none">
+			<h2> Richt je telefoon naar het bord: </h2>
+			<div class="inner">
+				<div class ="scanline"></div>
+			</div>
+		</div>
+
+		<div id="selectPrompt" style = "display:none; position:absolute; bottom:5vh; left:10vw; width : 80vw; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+			<h2 style = "background: #FCCF4D; color: black;"> Kies de jusite oplossing!</h2>
+		</div>
+
+		<div class = "menu" id="foundMenu" style = "display:none; ">
+			<div>
+				<h2 id = "resultHeader"> ResultHeader </h2>
+				<p class= "menuText" id ="resultText"> ResultText </p>
+			</div>
+			<p class="souvenirText">
+				<span>Boeren Geholpen:</span> <span id="questionsAnswered" class = "progressCounter"> 0 /4 </span>
+			</p>
+			<div class = "menuButtonContainer">
+				<button class = "btn-orange" id="btnContinue"> Ga Verder </button>
+			</div>
+		</div>
+
+		<div id = "arrowSpacer" style = "width: 8rem;"></div>
+
+	<script src="../libs/mindar/mindar-image-three.prod.js"></script>
+	<script src="./boeren.js" type ="module"></script> <!-- change name to proper JS file. -->
+
+	</body>
+</html>

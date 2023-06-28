@@ -1,0 +1,124 @@
+<html>
+	<link rel="shortcut icon" type="image/png" href="./images/favicon_main.png"/>
+
+	<head>
+		<title> Jurrien Brondijk @demoday 2022</title>
+		<link href="demoday/style.css" rel="stylesheet"/> 
+		<link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+		<link rel="shortcut icon" type="image/png" href="./images/favicon_main.png"/>
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body style = "background-color: #F0EAD9"> <!-- perhaps add a picture of the demoday setup as the background -->
+		<h1> AR for Zoo Education </h1>
+		<br>
+		<div style = "width:80%; margin-left:10%; background-color:white; padding-bottom:1rem; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+			<h2 style= "background-color: #8A946F;"> Select a Demo: </h2>
+			<br>
+			<div class = menuButtonContainer>
+				<span><button onclick=location.href="demoday/waterbuck.html" class = "btn-orange" style = "font-size:1rem; width:75%"> Waterbuck Escape </button></span><span><button class = "infoBtn" onclick="showHide(waterbuckMenu,true)"> i </button></span>
+				<br>
+				<br>
+				<span><button onclick=location.href="demoday/farmers.html" class = "btn-orange" style = "font-size:1rem; width:75%"> Protecting Farmers</button></span><span><button class = "infoBtn" onclick="showHide(farmersMenu,true)"> i </button></span>
+				<br>
+				<br>
+				<span><button onclick=location.href="demoday/rhinos.html" class = "btn-orange" style = "font-size:1rem; width:75%"> Rhino Management</button></span><span><button class = "infoBtn" onclick="showHide(rhinosMenu,true)"> i </button></span>
+				<br>
+				<br>
+				<span><button onclick=location.href="demoday/tigers.html" class = "btn-orange" style = "font-size:1rem; width:75%"> Tiger Camouflage</button></span><span><button class = "infoBtn" onclick="showHide(tigersMenu,true)"> i </button></span>
+				<br>
+				<br>
+				<span><button onclick=location.href="demoday/badsouvenirs.html" class = "btn-orange" style = "font-size:1rem; width:75%"> Bad Souvenirs </button></span><span><button class = "infoBtn" onclick="showHide(souvenirsMenu,true)"> i </button></span>
+				<br>
+			</div>
+		</div>
+
+		<div class = "menu" id="waterbuckMenu" style="display:none; overflow:hidden;">
+			<h2 style="position:sticky;"> <span>Waterbuck Escape</span> <span class="cross" onclick="showHide(waterbuckMenu,false,waterbuckMenuScroll)">X</span> </h2>
+			<div id="waterbuckMenuScroll" style = "max-height: 77vh; overflow:auto;">
+				<p class= "menuText" style="margin-bottom:2rem;"> This is one of the less serious experiences, being the most game-like by far.  
+				<br><br>It came from a desire to have more varied interaction types, wanting to do something with the phone's gyro-sensor. This was a perfect fit for a game about chasing an animal, which the waterbuck was a fun fit for, and perhaps slightly more original than a predator chasing its prey. 
+				<br><br>This experience took some balancing to get right. Originally it had the player play the game twice, once with and once without the circle on the waterbuck's behind. 
+				<br><br>The idea was that you would be able to tell it's more difficult without the circle, However, the difference was negligible and only made the game unnecessarily long, therefore this part was scrapped.
+				</p>
+				<img src="demoday/sitepics/waterbok.jpg" style="width:100%; margin:0;">
+			</div>
+		</div>
+
+		<div class = "menu" id="farmersMenu" style="display:none; overflow:hidden;">
+			<h2> <span>Protecting Farmers</span> <span class="cross" onclick="showHide(farmersMenu,false,farmersMenuScroll)">X</span> </h2>
+			<div id="farmersMenuScroll" style = "max-height: 77vh; overflow:auto;">
+				<p class= "menuText"> This experience is about human-wildlife conflict. In the experience, you do a kind of quiz on your phone, letting you help the farmer on the sign. </p>
+				<img src="demoday/sitepics/boeren_sign.jpg" style="width:100%; margin:0;">
+				<p class= "menuText"> encourages people to read all the information on the sign, and did so successfully during user tests.
+				<br><br>To get the right answer, you need to look at the details of the problem presented by the farmer. What animals are causing problems? What solutions do they already have? When are the problems occurring?
+				<br><br>The idea for this experience came from reading about the work being done by the various organizations the zoo supports, which are also featured in the experience itself.
+				</p>
+				<img src="demoday/sitepics/boeren.jpg" style="width:100%; margin:0;">
+			</div>
+		</div>
+
+		<div class = "menu" id="rhinosMenu" style="display:none; overflow:hidden;">
+			<h2> <span>Rhino Management</span> <span class="cross" onclick="showHide(rhinosMenu,false,rhinosMenuScroll)">X</span> </h2>
+			<div id="rhinosMenuScroll" style = "max-height: 77vh; overflow:auto;">
+				<p class= "menuText"> In this experience, players take the role of species coordinator for the white rhino. This is essentially a management puzzle, to solve it the player needs to create a bachelor group (a single-gendered group) of rhinos, as there's too many males for each to be placed within a family group. 
+				<br><br>Originally, this experiences was designed for gorillas, as with this species it is easy to tell the males from the females, and the zoo actually houses a bachelor group of gorillas in the middle of the park.
+				<br><br>However, the zoo preferred to make the it about the white rhino, as that is one of the species the zoo is actually the species coordinator of in real life. 
+				<br><br> Luckily, white rhino management also makes use of bachelor groups, so the game did not have to be altered in that regard. 
+				</p>
+				<img src="demoday/sitepics/rhinos.jpg" style="width:100%; margin:0;">
+			</div>
+		</div>
+
+		<div class = "menu" id="tigersMenu" style="display:none; overflow:hidden;">
+			<h2> <span>Tiger Camouflage</span> <span class="cross" onclick="showHide(tigersMenu,false,tigersMenuScroll)">X</span> </h2>
+			<div id="tigersMenuScroll" style = "max-height: 77vh; overflow:auto;">
+				<p class= "menuText"> This was the first experience created, back in my M2.1 project, in which I explored the possibilities for augmented, and virtual reality at the zoo. </p>
+				<img src="demoday/sitepics/tigers_old.jpg" style="width:100%; margin:0;">
+
+				<p class= "menuText"> It was well received by visitors, but also showed areas for improvement
+				<br><br>People thought they were looking through the eyes of a tiger, they didn't recognize the purpose of the sign on first glance, and people not wanting to use their phone felt left out. 
+				<br><br> All these issues became the foundation of how these signs were designed during the FMP iteration. Signs were given enough info to understand the topic without the phone, and now feature an image showing what the experience looks like. 
+				</p>
+				<img src="demoday/sitepics/tijgers.jpg" style="width:100%; margin:0;">
+			</div>
+		</div>
+
+		<div class = "menu" id="souvenirsMenu" style="display:none; overflow:hidden;">
+			<h2> <span>Bad Souvenirs</span> <span class="cross" onclick="showHide(souvenirsMenu,false,souvenirsMenuScroll)">X</span> </h2>
+			<div id="souvenirsMenuScroll" style = "max-height: 77vh; overflow:auto;">
+				<p class= "menuText"> The idea for this experience came from an existing sign at Beekse Bergen, which talks about the ivory trade, mentioning ivory as  "bad souvenirs". </p>
+				<img src="demoday/sitepics/ivoor.jpg" style="width:100%; margin:0;">
+
+				<p class= "menuText"> It made me wonder what other bad souvenirs are out there that might be worth teaching about, which lead to this concept.
+					<br><br> At first, the idea was very simple, just have a sign with suitcases you could look inside of using your phone. 
+					<br><br> However, this didn't seem very engaging, and didn't provide much added value over something that could be done with a regular sign. Making it so that the suitcases moved, made everything just a little more engaging and fun.
+				</p>
+				<img src="demoday/sitepics/souvenirs.jpg" style="width:100%; margin:0;">
+			</div>
+		</div>
+
+		<script>
+			let waterbuckMenu = document.getElementById("waterbuckMenu");
+			let farmersMenu = document.getElementById("farmersMenu");
+			let rhinosMenu = document.getElementById("rhinosMenu");
+			let tigersMenu = document.getElementById("tigersMenu");
+			let souvenirsMenu = document.getElementById("souvenirsMenu");
+
+			let waterbuckMenuScroll = document.getElementById("waterbuckMenuScroll");
+			let farmersMenuScroll = document.getElementById("farmersMenuScroll");
+			let rhinosMenuScroll = document.getElementById("rhinosMenuScroll");
+			let tigersMenuScroll = document.getElementById("tigersMenuScroll");
+			let souvenirsMenuScroll = document.getElementById("souvenirsMenuScroll");
+
+			function showHide(menu,show,scrollmenu){
+				if (show){
+					menu.style.display = "block";
+				} else {
+					scrollmenu.scrollTop = 0;	
+					menu.style.display = "none";
+				}
+			}
+		</script>
+	</body>
+</html>

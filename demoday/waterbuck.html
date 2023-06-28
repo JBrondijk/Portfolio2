@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Waterbuck Escape! </title>
+		<link href="style.css" rel="stylesheet"/>
+		<link rel="shortcut icon" type="image/png" href="https://www.beeksebergen.nl/favicon/apple-icon-120x120.png"/>
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body style = "overflow:hidden; max-width:100%">
+		<h1 style = "padding-left:3rem"> <img src="./textures/arrow.png" onclick =location.href="/demoday.html" style = "height:1.5rem; position:absolute; margin-left: -2.5rem;"></img> Waterbuck Escape</h1>
+		
+		<div id="videoContainer" style="height:95vh">
+			<video id="VIDEO" style = "height: 95vh; width: 100vw; object-fit: cover;">Give the website access to your camera to play.</video>
+		</div>
+
+		<div class="progress-container">
+			<img src="./textures/finish.png" class="finish" style = "position:relative; width:5vw; height: 0.8rem; left: 95vw; top: -0.1rem;"></img>
+			<div class="progress"> <img src="./textures/playerIcon.png" id="playerIcon" style = "position:relative; width: 2.5rem; height: 2.5rem; top: -0.8rem; left: -5vw;"></img> </div>
+			<div class="progressLion"> <img src="./textures/lionIcon.png" id="lionIcon" style = "position:relative; width: 2.5rem; height: 2.5rem; top: -0.8rem; left: -14vw;"></img> </div>
+		</div>
+		
+		<div class = "menu" id="startMenu">
+			<h2> Follow your fellow waterbuck! </h2>
+			<p class= "menuText"> When a group of waterbuck has to escape from the claws of a lion, or any other predator, the white circle helps the waterbuck stay together, as the circle stands out in the tall grass. <br> I think there's a lion coming! Follow your fellow waterbuck, and pay close attention to the circle! </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+
+		<div class = "menu" id="iOSMenu" style = "display:none">
+			<h2> Give access to play </h2>
+			<!-- <p class= "menuText"> Deze ARvaring werkt momenteel alleen op Android telefoons. Sorry voor het ongemak.  </p> -->
+			<p class= "menuText"> Give access to use the camera and orientation to play.  </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btniOS"> Allow </button>
+			</div>
+		</div>
+
+		<div class = "menu" id="warningMessage" style = "display:none">
+			<h2> Attention! </h2>
+			<p class= "menuText" style = "margin-bottom:0;"> Be mindful of your surroundings during play. Stay in one spot and assure there is enough room around you.</p>
+			
+			<div class = menuButtonContainer>
+				<img src="./textures/bewareSurroundings.png" style = "width: 95%; margin-bottom:30px;"></img>
+
+				<button class = "btn-orange" id="btnWarn"> OK </button>
+			</div>
+		</div>
+
+		<div class = "menu" id="gameOverMenu" style = "display:none">
+			<h2> Gepakt! </h2>
+			<p class= "menuText"> Too bad, the lion caught up to you... <br>Keep looking at your fellow waterbuck! </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnGameOver"> Try again </button>
+			</div>
+		</div>
+		<div class = "menu" id="winMenu" style = "display:none">
+			<h2> Escaped! </h2>
+			<p class= "menuText"> 
+				You've escaped from the lion, well done! Did the circle help at all?
+				<br>
+				<br> You've escaped in <span class = "waterbokScore" id = "score">x</span> seconds!
+				<br>
+				<br> Your fastest time is <span class = "waterbokScore" id = "highScore">x</span> seconds.
+				<br>
+				<br> Think you can do it faster? Try again, or return to the demo overview page!</p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnWin"> Try again </button>
+				<button class = "btn-orange" id="btnRet" onclick =location.href="/demoday.html"> Return to demo overview </button>
+			</div>
+		</div>
+	
+	<script src="./waterbuck.js" type ="module"></script>
+	</body>
+</html>

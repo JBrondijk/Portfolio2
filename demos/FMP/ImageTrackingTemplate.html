@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Pagina Titel! </title>
+		<link href="style.css" rel="stylesheet"/> 
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body style = "overflow:hidden;">
+		<h1> Pagina Titel</h1>
+		<div> 
+		
+		<div id="myARcontainer"></div>
+		</div>
+
+		<div id = "spacer"> </div>
+
+		
+		</div>
+		
+		<div class = "menu" id="startMenu">
+			<h2> Titel text! </h2>
+			<p class= "menuText"> Text voor startmenu. <br> Uitleg spel. </p>
+			<div style = "margin:0; padding-left: 10%;">
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+
+		<div id = "scanning" class= "menu" style = "display:none">
+			<h2> Richt je telefoon naar het bord: </h2>
+			<div class="inner">
+				<div class ="scanline"></div>
+			</div>
+		</div>
+
+	<script src="../libs/mindar/mindar-image-three.prod.js"></script>
+	<script src="./ImageTrackingTemplate.js" type ="module"></script> <!-- change name to proper JS file. -->
+
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Waterbok Achtervolging! </title>
+		<link href="style.css" rel="stylesheet"/>
+		<meta name="google" content="notranslate">
+	</head>
+
+	<body>
+		<h1> Waterbok Achtervolging</h1>
+		
+		<div id="videoContainer">
+			<video id="VIDEO">Geef de website toestemming om de camera te gebruiken om verder te kunnen.</video> 
+			
+		</div>
+		<div id = "spacer"> </div>
+
+		<div class="progress-container">
+			<img src="./textures/finish.png" class="finish"></img>
+			<div class="progress"> <img src="./textures/playerIcon.png" class="playerIcon"></img> </div>
+			<div class="progressLion"> <img src="./textures/lionIcon.png" class="lionIcon"></img> </div>
+		</div>
+		<div style="margin:auto;"> 
+			<p class="scoreText" style = "padding-top : 4vh;">
+			<span>Score:</span> <span class="waterbokScore" id="score0"> -- </span>
+			</p>
+		</div>
+		<div style="margin:auto;"> 
+			<p class="scoreText" style = "padding-top : 4vh;">
+			<span>Hoogste Score (met ellips):</span> <span class="waterbokScore" id="score1"> -- </span>
+			</p>
+		</div>
+		<div style="margin:auto;"> 
+			<p class="scoreText" style = "padding-top : 4vh;">
+			<span>Hoogste Score (zonder ellips):</span> <span class="waterbokScore" id="score2"> -- </span>
+			</p>
+		</div>
+
+		<div class = "menu" id="startMenu">
+			<h2> Volg je mede-waterbok! </h2>
+			<p class= "menuText"> Wanneer een groep waterbokken moet ontsnappen aan de klauwen van een leeuw, of ander roofdier, helpt de witte cirkel achterop de waterbok met het bij elkaar blijven, deze valt namelijk goed op tussen het hoge gras. <br> Volgens mij komt er een leeuw aan! Volg je mede-waterbok en let goed op de circel!  </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+
+		<div class = "menu" id="iOSMenu" style = "display:none">
+			<h2> Sta Toe: </h2>
+			<p class= "menuText"> Geef toestemming om de camera en orientatie te gebruiken om het spel te kunnen spelen.  </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btniOS"> Sta toe </button>
+			</div>
+		</div>
+
+		<div class = "menu" id="warningMessage" style = "display:none">
+			<h2> Let op! </h2>
+			<p class= "menuText" style = "margin-bottom:0;"> Pas tijdens het spelen op je omgeving, zorg dat er voldoende ruimte om je heen is.</p>
+			
+			<div class = menuButtonContainer>
+				<img src="./textures/bewareSurroundings.png" style = "width: 95%; margin-bottom:30px;"></img>
+
+				<button class = "btn-orange" id="btnWarn"> Oke </button>
+			</div>
+		</div>
+
+		<div class = "menu" id="gameOverMenu" style = "display:none">
+			<h2> Gepakt! </h2>
+			<p class= "menuText"> Helaas, de leeuw heeft je te pakken genomen... <br> Zorg dat je je mede-waterbok blijft volgen! </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnGameOver"> Probeer opnieuw </button>
+			</div>
+		</div>
+		<div class = "menu" id="win1Menu" style = "display:none">
+			<h2> Ontsnapt! </h2>
+			<p class= "menuText"> Je bent ontsnapt van de leeuw, goed gedaan! <br> <br> Hielp de cirkel een beetje? <br> Zonder ellips zou het een stuk moeilijker zijn, probeer het maar eens zonder! </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnWin1"> Probeer zonder cirkel </button>
+			</div>
+		</div>
+		<div class = "menu" id="win2Menu" style = "display:none">
+			<h2> Ontsnapt! </h2>
+			<p class= "menuText">Je bent weer ontsnapt van de leeuw, goed gedaan! <br> <br> Dat was een stukje lastiger of niet? <br> Toch wel handig zo'n cirkel! <br> Als je wil kan je je score nog verbeteren, of zoek een andere ARvaring! </p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange"> Probeer met cirkel </button>
+				<button class = "btn-orange"> Probeer zonder cirkel </button>
+				<button class = "btn-orange"> Ga naar ARvaringen </button>
+			</div>
+		</div>
+		
+
+
+	<script src="./waterbok2.js" type ="module"></script>
+	</body>
+</html>

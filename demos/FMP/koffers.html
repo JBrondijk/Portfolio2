@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Foute Souvenirs! </title>
+		<link href="style.css" rel="stylesheet"/> 
+	</head>
+
+	<body>
+		<h1> Foute Souvenirs</h1>
+		<div> 
+		
+		<div id="myARcontainer"></div>
+		<button class = "btn-orange" id="btnSelect" style= "position: absolute; top: 85vh; width:80%; margin-left: 10vw; font-size: 45pt; display: none"> Selecteer </button>
+		</div>
+
+		<div id = "spacer"> </div>
+
+		
+		</div>
+		<div class="pageBottom">
+		<img src="https://d33b12c77av9bg.cloudfront.net/img/logo.svg" alt=Logo class="center">
+		</div>
+
+		<div class = "menu" id="startMenu">
+			<h2> Vind de foute souvenris! </h2>
+			<p class= "menuText"> Text voor startmenu. <br> Uitleg spel. </p>
+			<div style = "margin:0; padding-left: 10%;">
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+
+		<div id = "scanning" class= "menu" style = "display:none">
+			<h2> Richt je telefoon naar het bord: </h2>
+			<div class="inner">
+				<div class ="scanline"></div>
+			</div>
+		</div>
+
+		<div class = "menu" id="selectMenu" style = "display:none">
+			<h2> Zoek de foute souvenirs!</h2>
+			<div id="xrayBox">
+			</div>
+		</div>
+
+	<script src="../libs/mindar/mindar-image-three.prod.js"></script>
+	<script src="./koffers.js" type ="module"></script>
+	</body>
+</html>

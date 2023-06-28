@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Tiger Camouflage </title>
+		<link href="style.css" rel="stylesheet"/>
+		<link rel="shortcut icon" type="image/png" href="https://www.beeksebergen.nl/favicon/apple-icon-120x120.png"/>
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<svg>
+		<defs>
+			<filter id="protanopia">
+			  <feColorMatrix type="matrix"
+				values="0.567, 0.433, 0,     0, 0
+						0.558, 0.442, 0,     0, 0
+						0,     0.242, 0.758, 0, 0
+						0,     0,     0,     1, 0"/>
+			</filter>
+		</defs>
+	</svg>
+	
+	<body  style = "overflow:hidden; height:100%">
+		<h1 style = "padding-left:3rem"> <img src="./textures/arrow.png" onclick =location.href="/demoday.html" style = "height:1.5rem; position:absolute; margin-left: -2.5rem;"></img> Tiger Camouflage</h1>
+		
+		<div id="videoContainer">
+			<video id="VIDEO" style = "height: 95vh; width: 100vw; object-fit: cover; -webkit-filter: url(#protanopia);	filter: url(#protanopia); position: absolute;">Give the website access to your camera to proceed.</video>
+			<canvas id="myCanvas" style = "height: 95vh; width: 100vw; position: absolute;"></canvas>
+		</div>
+
+		
+		<div class = "menu" id="startMenu" >
+			<h2> How does a tiger's camouflage work? </h2>
+			<p class= "menuText"> For us it's not that hard to notice a tiger, they have quite an appearant colour after all. <br>
+				Yet, the tiger's prey has a lot more trouble with this than we do.  </p>
+			<p class= "menuText"> <span> Can you still spot the tiger trough the eyes of a </span> <span style = "font-weight:600">deer?<span</p>
+			<div class = menuButtonContainer>
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+		
+		<div id="infoMenu" style = "display:none;">
+			<h2 id = "infoMenuHead" style = "background-color: #8A946F;"> What am I seeing now? <i id="arrow"></i> </h2>
+			<p class= "menuText" style = "color:black; background-color: white; font-family: sofia-pro,Century Gothic,sans-serif; letter-spacing: -.25px; word-spacing: -0.1px;	font-size: 0.95rem;	line-height: 1.5; font-weight: 300;	margin-top:10px;"> 
+				You are looking through the eyes of a deer. Deer are colorblind, ans so are other animals the tiger preys on. These animals can't see t the difference between red and green. This causes tigers to have the same colour as the grass, and the leaves around them!
+			<br><br> Can you still spot the tiger through the eyes of a deer?</p>
+		</div>
+	<script src="tigers.js"></script>
+	</body>
+</html>

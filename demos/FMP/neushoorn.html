@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Neushoorn Beheer </title>
+		<link href="style.css" rel="stylesheet"/> 
+		<meta name="google" content="notranslate">
+		<link rel="shortcut icon" type="image/png" href="https://www.beeksebergen.nl/favicon/apple-icon-120x120.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../libs/mindar/mindar-image-three.prod.js"></script>
+		<script src="./neushoorn.js" type ="module"></script> 
+	</head>
+
+	<body style = "overflow:hidden;">
+		<h1> Neushoorn Beheer</h1>
+		<div> 
+		
+			<div id="myARcontainer"> </div>
+		</div>
+
+		<div id = "enclInfo" style = "display:none; overflow:hidden"> 
+			<div class = "rhinoMenu" id = "encl0">
+				<h3>Verblijf 1: <span id = "encl0Contents" style="float:right"> (1m - 3v)</span></h3>
+				<img class = "rhinoProblem" id= "encl0Fight" src="textures/RhinoIconFight.png"> </img>
+				<img class = "rhinoProblem" id= "encl0Breed" src="textures/RhinoIconInbreeding.png"> </img>
+				<img class = "rhinoProblem" id= "encl0Man" style="display:none" src="textures/RhinoIconMan.png"> </img>
+				<img class = "rhinoProblem" id= "encl0Crowd" style="display:none" src="textures/RhinoIconOvercrowding.png"> </img>
+			</div>
+			<div class = "rhinoMenu" id = "encl1">
+				<h3>Verblijf 2: <span id = "encl1Contents" style="float:right"> (1m - 3v)</span></h3>
+				<img class = "rhinoProblem" id= "encl1Fight" src="textures/RhinoIconFight.png"> </img>
+				<img class = "rhinoProblem" id= "encl1Breed" src="textures/RhinoIconInbreeding.png"> </img>
+				<img class = "rhinoProblem" id= "encl1Man" style="display:none" src="textures/RhinoIconMan.png"> </img>
+				<img class = "rhinoProblem" id= "encl1Crowd" style="display:none" src="textures/RhinoIconOvercrowding.png"> </img>
+			</div>
+			<div class = "rhinoMenu" id = "encl2">
+				<h3>Verblijf 3: <span id = "encl2Contents" style="float:right"> (1m - 3v)</span></h3>
+				<img class = "rhinoProblem" id= "encl2Fight" src="textures/RhinoIconFight.png"> </img>
+				<img class = "rhinoProblem" id= "encl2Breed" src="textures/RhinoIconInbreeding.png"> </img>
+				<img class = "rhinoProblem" id= "encl2Man" style="display:none" src="textures/RhinoIconMan.png"> </img>
+				<img class = "rhinoProblem" id= "encl2Crowd" style="display:none" src="textures/RhinoIconOvercrowding.png"> </img>
+			</div>
+			<div class = "rhinoMenu" id = "encl3">
+				<h3>Verblijf 4: <span id = "encl3Contents" style="float:right"> (1m - 3v)</span></h3>
+				<img class = "rhinoProblem" id= "encl3Fight" src="textures/RhinoIconFight.png"> </img>
+				<img class = "rhinoProblem" id= "encl3Breed" src="textures/RhinoIconInbreeding.png"> </img>
+				<img class = "rhinoProblem" id= "encl3Man" style="display:none" src="textures/RhinoIconMan.png"> </img>
+				<img class = "rhinoProblem" id= "encl3Crowd" style="display:none" src="textures/RhinoIconOvercrowding.png"> </img>
+			</div>
+			<div class = "rhinoMenu" id = "encl4">
+				<h3>Verblijf 5: <span id = "encl4Contents" style="float:right"> (1m - 3v)</span></h3>
+				<img class = "rhinoProblem" id= "encl4Fight" src="textures/RhinoIconFight.png"> </img>
+				<img class = "rhinoProblem" id= "encl4Breed" src="textures/RhinoIconInbreeding.png"> </img>
+				<img class = "rhinoProblem" id= "encl4Man" style="display:none" src="textures/RhinoIconMan.png"> </img>
+				<img class = "rhinoProblem" id= "encl4Crowd" style="display:none" src="textures/RhinoIconOvercrowding.png"> </img>
+			</div>
+		</div>
+		
+		<div class = "menu" id="startMenu" style="display:block">
+			<h2> Stamboekhouder nodig! </h2>
+			<p class= "menuText"> In de breedlipneushoorn verblijven op dit bord is van alles mis! Er vind inteelt plaats, en mannetjes vechten om wie de vrouwtjes mag hebben.
+					<br><br> Kan jij deze neushoorns beter over de hokken verdelen, zodat er geen problemen meer zijn? 
+					</p>
+			<div class = "menuButtonContainer">
+				<button class = "btn-orange" id="btnStart"> Start </button>
+			</div>
+		</div>
+		<div class = "menu" id="controlsMenu" style="display:none">
+			<h2> Spel uitleg: </h2>
+			<p class= "menuText"> Los de problemen in alle verblijven op door neushoorns te verplaatsen. 
+				<br>
+				<br> Open de verblijven door op de menu's te klikken.
+				<br>
+				<br> Voeg neushoorns toe aan je selectie door op ze te klikken.
+				<br>
+				<br> Verplaats neushoorns door ze in een ander verblijf uit je selectie te halen.
+				<br>
+				<br>Het spel eindigt wanneer alle problemen zijn opgelost <span class="bold"> en </span> er geen neushoorns meer in je selectie zitten. 
+					</p>
+			<div class = "menuButtonContainer">
+				<button class = "btn-orange" id="btnControls"> Start </button>
+			</div>
+		</div>
+
+
+		<div id = "scanning" class= "menu" style = "display:none">
+			<h2> Richt je telefoon naar het bord: </h2>
+			<div class="inner">
+				<div class ="scanline"></div>
+			</div>
+		</div>
+
+		<div class = "menu" id="enclMenu" style="display:none; overflow:hidden; top: 8vh; max-height: 87vh;">
+			<h2> <span id = "menuTitle">Verblijf 1:</span> <span class="cross" id="closeMenu">X</span> </h2>
+			<div id="enclMenuScroll" style = "max-height: 55vh; overflow:auto;">
+				<h3 style = "margin-right:1rem; margin-left:1rem; margin-top:0.3rem; margin-bottom:0.3rem; background-color:#ADD2FF; border-radius: 0.4rem;"> mannetjes: </h3>
+					<div id = "enclMales" style = "margin-left:1rem;min-height:3rem;"></div>
+				<h3 style = "margin-right:1rem; margin-left:1rem; margin-top:0.3rem; margin-bottom:0.3rem; background-color:#FFADB0; border-radius: 0.4rem;"> vrouwtjes: </h3>
+					<div id = "enclFemales" style = "margin-left:1rem;min-height:3rem;"></div>
+				<h3 id = "problemHeader" style="background-color:#CC282E; margin-left:1rem;margin-right:1rem; margin-top:1rem;"> Problemen <span id="enclProblemCount">(3)</span>:</h3>
+					<div style = "min-height:2rem;">
+						<div id = "menuBreed" >
+							<h3 class = "problemHeader"> <img class = "rhinoProblem" style = "width:3.5rem; float:left; margin-left:-1rem; margin-top:-1rem; margin-right:0.5rem;" src="textures/RhinoIconInbreeding.png"> </img> Inteelt! </h3>
+							<p style="margin-left:1rem;"> De kleuren van de neushoorns geven een familieverband aan. Wanneer 2 neushoorns van dezelfde familie nakomelingen krijgen, hebben de nakomelingen een grote kans op erfelijke ziektes. Dus zet geen mannen en vrouwen met dezelfde kleur in 1 verblijf. </p>
+						</div>
+						<div id = "menuFight" >
+							<h3 class = "problemHeader"> <img class = "rhinoProblem" style = "width:3.5rem; float:left; margin-left:-1rem; margin-top:-1rem; margin-right:0.5rem;" src="textures/RhinoIconFight.png"> </img> Vechtende mannen! </h3>
+							<p style="margin-left:1rem;"> Mannetjes neushoorns kunnen best met elkaar overweg, tenzij er een vrouwtje bij zit. Dan maken ze ruzie om wie het vrouwtje mag. Zorg dus dat er maar 1 mannetje bij een groep vrouwtjes zit. </p>
+						</div>
+						<div id = "menuMan" >
+							<h3 class = "problemHeader"> <img class = "rhinoProblem" style = "width:3.5rem; float:left; margin-left:-1rem; margin-top:-1rem; margin-right:0.5rem;" src="textures/RhinoIconMan.png"> </img> Man ontbreekt! </h3>
+							<p style="margin-left:1rem;"> Zonder man kunnen deze vrouwtjes geen nakomelingen krijgen. Dat willen we wel, laat dus geen vrouwtjes zonder man! </p>
+						</div>
+						<div id = "menuCrowd" >
+							<h3 class = "problemHeader"> <img class = "rhinoProblem" style = "width:3.5rem; float:left; margin-left:-1rem; margin-top:-1rem; margin-right:0.5rem;" src="textures/RhinoIconOvercrowding.png"> </img> Verblijf te vol!</h3>
+							<p style="margin-left:1rem;"> Dit verblijf heeft niet genoeg plek voor de hoeveelheid neushoorns die er in zitten, er is maar plek voor 5 neushoorns!  </p>
+						</div>
+					</div>
+				</div>
+
+			<h3 style="background-color:#FCCF4D; margin-bottom: 0.5rem; color:black"> Selectie:</h3>
+			<div style = "max-height: 11vh; width:80vw; overflow:auto;">
+				<div id = "selectionMales" style = "width:45%; min-height: 3rem; border:0.2rem solid #ADD2FF; float:left; margin-left:0.2rem; border-radius: 0.4rem;"> </div> 
+				<div id = "selectionFemales" style = "width:45%; min-height: 3rem; border:0.2rem solid #FFADB0; float:right; margin-right:0.2rem;border-radius: 0.4rem;"> </div>
+			</div>
+
+			<div class = "menuButtonContainer" style = "padding-top:0.5rem;">
+				<button class = "btn-orange" id="movebtn"> Verplaats Neushoorns (0) </button>
+			</div>
+			
+		</div>
+
+		<div id="selectPrompt" style = "display:none; position:absolute; bottom:5vh; left:5vw; width : 90vw; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); text-align:center;">
+			<h2 id = "selectionMenu" style = "background: #FCCF4D; color: black;">1m - 3v geselecteerd</h2>
+		</div>
+
+		<div class = "menu" id="winMenu" style="display:none">
+			<h2> Alles Opgelost! </h2>
+			<p class= "menuText"> Je hebt alle problemen opgelost, geweldig gedaan!  
+			<br> 
+			<br> Binnen Europa zijn er wel 90 dierentuinen die breedlipneushoorns houden, een finke klus dus! 
+			<br> Zoals je zag, hebben we te veel mannetjes om ieder mannetje een familie te geven, en dus maken we mannengroepen.  
+			<br> Op het safaripark vind je ook mannengroepen, bijvoorbeeld van gorilla's en hyena's. Heb jij al eens een mannengroep gezien?
+			<br>
+			<br> Het kostte je in totaal <span class = "waterbokScore" id = "score">x</span> verhuizingen om alle neushoorns een fijne plek te geven. 
+			<br>
+			<br> Denk je dat je dat met minder verhuizingen kan? Probeer het opnieuw!
+			</p>
+			<div class = "menuButtonContainer">
+				<button class = "btn-orange" id="btnWin"> Speel opnieuw </button>
+			</div>
+		</div>
+
+		<div style = "display:none"> <img class= "rhinoIcon" id="iconMaster" src="textures/RhinoIcon.png"></img></div>
+	</body>
+</html>
